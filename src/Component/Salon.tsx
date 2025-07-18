@@ -24,12 +24,16 @@ const Salon = () => {
       <div className="container">
         <div className="salon-content">
           {/* Slideshow Image */}
-          <div className="salon-image">
+          <div className="salon-image flex justify-center items-center w-full">
             <Image
               src={images[currentIndex]}
               alt="TrendyNailz salon interior"
-              className="rounded shadow fade-in"
+              className="rounded shadow fade-in object-cover"
               priority={true}
+              width={400} // Desktop width
+              height={250} // Desktop height
+              sizes="(max-width: 640px) 100vw, 400px"
+              style={{ width: "100%", height: "auto", maxWidth: 400 }}
             />
           </div>
 

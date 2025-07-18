@@ -521,9 +521,29 @@
 
 .salon-image img {
   width: 100%;
-  height: 80vh;
+  height: 250px;         /* Good for iPhone screens */
+  max-width: 390px;      /* iPhone 16 Pro width */
+  object-fit: cover;
   border-radius: 0.5rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  display: block;
+}
+
+/* Tablets */
+@media (min-width: 640px) {
+  .salon-image img {
+    height: 350px;
+    max-width: 600px;    /* iPad/tablet width */
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .salon-image img {
+    height: 80vh;
+    max-width: 800px;
+  }
 }
 
 .salon-text {
@@ -698,6 +718,25 @@
     border-radius: 1rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-width: 390px;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  /* Tablet (iPad, ~768px wide) */
+  @media (min-width: 640px) {
+    .academy-image {
+      max-width: 600px;
+      height: 350px;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .academy-image {
+      max-width: 900px;
+      height: 80vh;
+    }
   }
   
   .grid-2col {
@@ -1601,4 +1640,3 @@
   .floating-icon:hover {
     background-color: #be185d; /* Tailwind’s pink-700 hex */
   }
-  

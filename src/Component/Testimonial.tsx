@@ -5,7 +5,7 @@ import Image from "next/image"; // Add this import
 
 const testimonials = [
 	{
-		name: '"Sarah J."',
+		name: "Sarah J.",
 		image:
 			"https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7988a3ab-8d15-4aa5-8613-c268835971b4.png",
 		text: "The Luxe Manicure exceeded all my expectations! The attention to detail and comfort level was unparalleled. My nails looked gorgeous for weeks!",

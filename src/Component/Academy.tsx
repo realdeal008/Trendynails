@@ -57,10 +57,12 @@ const Academy = () => {
               <Image
                 src={slideshowImages[currentSlide]}
                 alt="Academy classroom"
-                className="academy-image fade-in"
+                className="academy-image fade-in w-full max-w-xs sm:max-w-md md:max-w-lg rounded shadow object-cover"
                 width={600}
                 height={400}
                 priority={true}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 600px"
+                style={{ width: "100%", height: "auto", maxWidth: 600 }}
               />
             </div>
           </div>
