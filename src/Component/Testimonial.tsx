@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -36,7 +37,14 @@ const Testimonials = () => {
           {testimonials.map((t, index) => (
             <div className="testimonial-card" key={index}>
               <div className="testimonial-header">
-                <img src={t.image} alt={`Portrait of ${t.name}`} className="avatar" />
+                <Image
+                  src={t.image}
+                  alt={`Portrait of ${t.name}`}
+                  width={60}
+                  height={60}
+                  className="avatar"
+                  unoptimized // Optional: remove this if you've added remote patterns in next.config.js
+                />
                 <div>
                   <h4 className="client-name">{t.name}</h4>
                   <div className="stars">
