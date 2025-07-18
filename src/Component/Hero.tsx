@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import {Logo, Salogo} from "../app/assets.js"
 
 const Hero = () => {
@@ -16,7 +17,7 @@ const Hero = () => {
       setCurrentImage((prev) => (prev + 1) % images.length);
     }, 4000); // Change image every 4 seconds
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]); // Add images.length to dependencies
 
   return (
     <section className="hero-section">
@@ -37,14 +38,13 @@ const Hero = () => {
         </div>
 
         <div className="hero-image-wrapper">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              src={img.src}
-              alt={`Slideshow ${index + 1}`}
-              className={`hero-image ${index === currentImage ? 'active' : ''}`}
-            />
-          ))}
+          <Image
+            src={images[currentImage]}
+            alt={`Hero image ${currentImage + 1}`}
+            width={1200} // Set appropriate width
+            height={600} // Set appropriate height
+            className="hero-img"
+          />
           <div className="circle pink-circle"></div>
           <div className="circle purple-circle"></div>
         </div>
