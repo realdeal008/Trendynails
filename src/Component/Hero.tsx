@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import {Logo, Salogo} from "../app/assets.js"
+import {Logo, Steven, } from "../app/assets.js"
 
 const Hero = () => {
   const images = [
     Logo,
-    Salogo,
+    Steven,
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -28,7 +28,7 @@ const Hero = () => {
             <span className="gradient-text">Perfected</span>
           </h1>
           <p className="hero-description">
-            Discover the ultimate nail experience at TrendyNailz - where luxury meets creativity.
+            Discover the ultimate nail experience at TrendyNails - where luxury meets creativity.
             Our master technicians and educators redefine nail artistry for both clients and professionals.
           </p>
           <div className="hero-buttons">

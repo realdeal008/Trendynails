@@ -1,12 +1,12 @@
 "use client";
 
-import { asalon, saloon, saloosn , saalon} from '@/app/assets';
+import { Sail, saloon, Loose, sailor} from '@/app/assets';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const Salon = () => {
   const images = [
-      asalon,saloon,saloosn,saalon,
+      Sail,saloon,Loose,sailor,
 ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,7 +27,7 @@ const Salon = () => {
           <div className="salon-image flex justify-center items-center w-full">
             <Image
               src={images[currentIndex]}
-              alt="TrendyNailz salon interior"
+              alt="TrendyNails salon interior"
               className="rounded shadow fade-in object-cover"
               priority={true}
               width={400} // Desktop width
