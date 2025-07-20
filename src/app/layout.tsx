@@ -7,12 +7,14 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   preload: false,
+  fallback: ["sans-serif"], // Add fallback
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   preload: false,
+  fallback: ["monospace"], // Add fallback
 });
 
 export const metadata: Metadata = {
