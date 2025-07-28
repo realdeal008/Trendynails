@@ -41,6 +41,7 @@ h1, h2, h3, h4 {
 
 .hero-section {
     background: linear-gradient(135deg, rgba(232,62,140,0.15) 0%, rgba(255,255,255,1) 100%);
+    background-color: rgb(243, 17, 123);
 }
 
 .nav-link {
