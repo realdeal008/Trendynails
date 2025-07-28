@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    --primary-pink: #e83e8c;
+    --primary-pink: #f10976ffff;
     --primary-gold: #d4af37;
     --secondary-mauve: #8b5f9d;
 }
