@@ -39,10 +39,6 @@ h1, h2, h3, h4 {
     opacity: 0.5;
 }
 
-.hero-section {
-    background: linear-gradient(135deg, rgba(232,62,140,0.15) 0%, rgba(255,255,255,1) 100%);
-    background-color: rgb(243, 17, 123);
-}
 
 .nav-link {
     position: relative;
@@ -159,7 +155,7 @@ h1, h2, h3, h4 {
 }
 
 .gradient-text {
-    background: linear-gradient(to right, #db2777, #7e22ce);
+    background: linear-gradient(to right, #e48ab2, #a46cd6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -216,6 +212,8 @@ h1, h2, h3, h4 {
 }
 
 .hero-section {
+    
+    background-color: #ec4899;
     position: relative;
     overflow: hidden;
     padding: 5rem 1rem;
@@ -253,21 +251,98 @@ h1, h2, h3, h4 {
     }
 }
 
-.gradient-text {
-    background: linear-gradient(to right, #ec4899, #7e22ce);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    display: block;
+  @keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradients-text {
+  background: linear-gradient(
+    270deg,
+    #ff69b4,
+    #ffb6c1,
+    #ff69b4,
+    #da70d6
+  );
+  background-size: 400% 400%;
+  animation: shimmer 6s ease infinite;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  display: block;
+
+  text-shadow: 
+    0 0 5px rgba(255, 182, 193, 0.8),
+    0 0 10px rgba(255, 105, 180, 0.7),
+    0 0 20px rgba(255, 105, 180, 0.6);
+
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 192, 203, 0.4);
+  display: block;
 }
 
 .hero-description {
+
     font-size: 1.125rem;
-    color: #4b5563;
     margin-bottom: 2rem;
     max-width: 500px;
 }
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.hero-description {
+  background: linear-gradient(
+    120deg,
+    #ccc,
+    #fff,
+    #aaa,
+    #fff,
+    #ccc
+  );
+  background-size: 300% 100%;
+  animation: shine 2s linear infinite;
+  color: black;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.art{
+  background: linear-gradient(
+    120deg,
+    #ccc,
+    #fff,
+    #aaa,
+    #fff,
+    #ccc
+  );
+  background-size: 300% 100%;
+  animation: shine 2s linear infinite;
+  color: black;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+
 
 .hero-buttons {
     display: flex;
@@ -275,7 +350,27 @@ h1, h2, h3, h4 {
 }
 
 .btn-primary {
-    background-color: #ec4899;
+    background: linear-gradient(
+    120deg,
+    #ccc,
+    #fff,
+    #aaa,
+    #fff,
+    #ccc
+  );
+  background-size: 300% 100%;
+    color: black;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.btn-secondary {
+  background-color: #db2777;
+    border: 2px solid #db2777;
     color: white;
     padding: 0.75rem 2rem;
     border-radius: 9999px;
@@ -283,21 +378,8 @@ h1, h2, h3, h4 {
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #db2777;
-}
-
-.btn-secondary {
-    border: 2px solid #ec4899;
-    color: #ec4899;
-    padding: 0.75rem 2rem;
-    border-radius: 9999px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
 .btn-secondary:hover {
-    background-color: #fff0f5;
+    background-color: black;
 }
 
 .hero-image-wrapper {

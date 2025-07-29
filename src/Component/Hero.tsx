@@ -24,8 +24,8 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            <span>Nail Art</span>
-            <span className="gradient-text">Perfected</span>
+            <span className="art">Nail Art</span>
+            <span className="gradients-text">Perfected</span>
           </h1>
           <p className="hero-description">
             Discover the ultimate nail experience at TrendyNails - where luxury meets creativity.
